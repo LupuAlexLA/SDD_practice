@@ -1,0 +1,12 @@
+Struct1.c se foloseste de fisierul songs.txt, unde continutul fisierului este structurat asa:
+"xxxx,yyyy,zzzz"
+- se foloseste fgets(), strtok(), strtol(), strtof()
+
+Struct2.c se foloseste de fisierul playlist.txt, unde continutul fisierului este structurat asa:
+xxxx
+yyyy
+zzzz
+- se folosesc aceleasi functii
+
+Struct3.c se foloseste tot de fisierul playlist.txt cu aceeasi structura
+- se foloseste doar fscanf(), dar cu un specificator de format "%[^\n]\n"
