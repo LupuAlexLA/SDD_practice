@@ -63,6 +63,7 @@ void readSongs(char* fileName, Song** songs, int* songsNo)
     for(int i = 0; i < (*songsNo); i++)
         (*songs)[i] = readSong(f);
 
+    fclose(f);
 }
 
 void insertAtBeginning(Node** head, Song song)
