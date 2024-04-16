@@ -1,0 +1,171 @@
+##########
+Printing the sneakers from file!
+##########
+Id: 1
+Name: Nike Huarache
+Size: 42.50
+Price: 550
+
+Id: 2
+Name: Adidas Super Star
+Size: 43.00
+Price: 600
+
+Id: 3
+Name: Puma RS Running
+Size: 42.50
+Price: 730
+
+Id: 4
+Name: Under Armour Project Rock 6
+Size: 42.66
+Price: 780
+
+Id: 5
+Name: Puma Trinity
+Size: 42.00
+Price: 750
+
+Id: 6
+Name: Nike Runner
+Size: 43.50
+Price: 450
+
+Id: 7
+Name: Nike UpTempo
+Size: 42.50
+Price: 800
+
+Id: 8
+Name: Vans Clasic
+Size: 43.66
+Price: 450
+
+---------------------
+##########
+Printing the sneakers from hash table!
+##########
+Position 0
+Id: 1
+Name: Nike Huarache
+Size: 42.50
+Price: 550
+
+Id: 4
+Name: Under Armour Project Rock 6
+Size: 42.66
+Price: 780
+
+Position 1
+Id: 3
+Name: Puma RS Running
+Size: 42.50
+Price: 730
+
+Id: 6
+Name: Nike Runner
+Size: 43.50
+Price: 450
+
+Id: 7
+Name: Nike UpTempo
+Size: 42.50
+Price: 800
+
+Position 2
+	Empty bucket
+Position 3
+	Empty bucket
+Position 4
+	Empty bucket
+Position 5
+	Empty bucket
+Position 6
+Id: 5
+Name: Puma Trinity
+Size: 42.00
+Price: 750
+
+Position 7
+Id: 2
+Name: Adidas Super Star
+Size: 43.00
+Price: 600
+
+Id: 8
+Name: Vans Clasic
+Size: 43.66
+Price: 450
+
+---------------------
+##########
+Searching in hash table for 'Nike Runner'!
+##########
+Found at position 1
+Id: 6
+Name: Nike Runner
+Size: 43.50
+Price: 450
+
+##########
+Inserting new sneaker in hash table!
+##########
+---------------------
+##########
+Printing again the sneakers from hash table!
+##########
+Position 0
+Id: 1
+Name: Nike Huarache
+Size: 42.50
+Price: 550
+
+Id: 4
+Name: Under Armour Project Rock 6
+Size: 42.66
+Price: 780
+
+Position 1
+Id: 3
+Name: Puma RS Running
+Size: 42.50
+Price: 730
+
+Id: 6
+Name: Nike Runner
+Size: 43.50
+Price: 450
+
+Id: 7
+Name: Nike UpTempo
+Size: 42.50
+Price: 800
+
+Position 2
+	Empty bucket
+Position 3
+Id: 9
+Name: diablo
+Size: 42.50
+Price: 1500
+
+Position 4
+	Empty bucket
+Position 5
+	Empty bucket
+Position 6
+Id: 5
+Name: Puma Trinity
+Size: 42.00
+Price: 750
+
+Position 7
+Id: 2
+Name: Adidas Super Star
+Size: 43.00
+Price: 600
+
+Id: 8
+Name: Vans Clasic
+Size: 43.66
+Price: 450

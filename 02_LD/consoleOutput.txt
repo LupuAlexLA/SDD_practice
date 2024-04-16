@@ -1,0 +1,189 @@
+##########
+Printing the sneakers from file!
+##########
+Id: 1
+Name: Nike Huarache
+Size: 42.50
+Price: 550
+
+Id: 2
+Name: Adidas Super Star
+Size: 43.00
+Price: 600
+
+Id: 3
+Name: Puma RS Running
+Size: 42.50
+Price: 730
+
+Id: 4
+Name: Under Armour Project Rock 6
+Size: 42.66
+Price: 780
+
+Id: 5
+Name: Puma Trinity
+Size: 42.00
+Price: 750
+
+---------------------
+##########
+Printing the sneakers from double list!
+##########
+Id: 1
+Name: Nike Huarache
+Size: 42.50
+Price: 550
+
+Id: 2
+Name: Adidas Super Star
+Size: 43.00
+Price: 600
+
+Id: 3
+Name: Puma RS Running
+Size: 42.50
+Price: 730
+
+Id: 4
+Name: Under Armour Project Rock 6
+Size: 42.66
+Price: 780
+
+Id: 5
+Name: Puma Trinity
+Size: 42.00
+Price: 750
+
+---------------------
+##########
+Inserting sneaker at beginning: id: 0; name: first; size: 40.5; price: 500
+##########
+##########
+Inserting sneaker at end: id: 6; name: last; size: 40.5; price: 500
+##########
+##########
+Asc Printing the sneakers from double list after inserts!
+##########
+Id: 0
+Name: first
+Size: 40.50
+Price: 500
+
+Id: 1
+Name: Nike Huarache
+Size: 42.50
+Price: 550
+
+Id: 2
+Name: Adidas Super Star
+Size: 43.00
+Price: 600
+
+Id: 3
+Name: Puma RS Running
+Size: 42.50
+Price: 730
+
+Id: 4
+Name: Under Armour Project Rock 6
+Size: 42.66
+Price: 780
+
+Id: 5
+Name: Puma Trinity
+Size: 42.00
+Price: 750
+
+Id: 6
+Name: last
+Size: 42.50
+Price: 500
+
+---------------------
+##########
+Desc Printing the sneakers from double list after inserts!
+##########
+Id: 6
+Name: last
+Size: 42.50
+Price: 500
+
+Id: 5
+Name: Puma Trinity
+Size: 42.00
+Price: 750
+
+Id: 4
+Name: Under Armour Project Rock 6
+Size: 42.66
+Price: 780
+
+Id: 3
+Name: Puma RS Running
+Size: 42.50
+Price: 730
+
+Id: 2
+Name: Adidas Super Star
+Size: 43.00
+Price: 600
+
+Id: 1
+Name: Nike Huarache
+Size: 42.50
+Price: 550
+
+Id: 0
+Name: first
+Size: 40.50
+Price: 500
+
+---------------------
+##########
+Sneaker sters de la inceput:
+##########
+Id: 0
+Name: first
+Size: 40.50
+Price: 500
+
+---------------------
+##########
+Sneaker sters de la inceput:
+##########
+Id: 6
+Name: last
+Size: 42.50
+Price: 500
+
+---------------------
+##########
+Asc Printing the sneakers from double list after delete!
+##########
+Id: 1
+Name: Nike Huarache
+Size: 42.50
+Price: 550
+
+Id: 2
+Name: Adidas Super Star
+Size: 43.00
+Price: 600
+
+Id: 3
+Name: Puma RS Running
+Size: 42.50
+Price: 730
+
+Id: 4
+Name: Under Armour Project Rock 6
+Size: 42.66
+Price: 780
+
+Id: 5
+Name: Puma Trinity
+Size: 42.00
+Price: 750
+
+---------------------
