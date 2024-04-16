@@ -2,6 +2,7 @@
 #include<string.h>
 //#include<malloc.h>
 #include<stdlib.h>
+
 #define LINESIZE 128
 typedef struct Sneaker Sneaker;
 typedef struct Node Node;
@@ -10,25 +11,25 @@ typedef struct DoublyLinkedList DoublyLinkedList;
 
 struct Sneaker {
     int id;
-    char* name;
+    char *name;
     float size;
     int price;
 };
 
 struct Node {
     Sneaker sneaker;
-    Node* next;
+    Node *next;
 };
 
 struct NodeDLL {
     Sneaker sneaker;
-    NodeDLL* prev;
-    NodeDLL* next;
+    NodeDLL *prev;
+    NodeDLL *next;
 };
 
 struct DoublyLinkedList {
-    NodeDLL* head;
-    NodeDLL* tail;
+    NodeDLL *head;
+    NodeDLL *tail;
 };
 
 void printSneakerToConsole(Sneaker sneaker) {
@@ -36,43 +37,43 @@ void printSneakerToConsole(Sneaker sneaker) {
            sneaker.id, sneaker.name, sneaker.size, sneaker.price);
 }
 
-Sneaker initSneaker(int id, char* name, float size, int price) {
+Sneaker initSneaker(int id, char *name, float size, int price) {
 
-    Sneaker newSneaker = { .id = id, .name = name, .size = size, .price = price };
+    Sneaker newSneaker = {.id = id, .name = name, .size = size, .price = price};
 
-    newSneaker.name = malloc((strlen(name) + 1) * sizeof(char));
+    newSneaker.name = malloc((strlen(name) + 1));
     strcpy(newSneaker.name, name);
 
     return newSneaker;
 }
 
-Sneaker readSneakerFromFile(FILE* f) {
+Sneaker readSneakerFromFile(FILE *f) {
     char buffer[LINESIZE];
     Sneaker sneaker;
 
     fgets(buffer, LINESIZE, f);
-    sneaker.id = (int)strtol(buffer, NULL, 10);
+    sneaker.id = (int) strtol(buffer, NULL, 10);
 
     fgets(buffer, LINESIZE, f);
-    sneaker.name = (char*)malloc(strlen(buffer) + 1);
+    sneaker.name = (char *) malloc(strlen(buffer) + 1);
     strcpy(sneaker.name, buffer);
 
     fgets(buffer, LINESIZE, f);
     sneaker.size = strtof(buffer, NULL);
 
     fgets(buffer, LINESIZE, f);
-    sneaker.price = (int)strtol(buffer, NULL, 10);
+    sneaker.price = (int) strtol(buffer, NULL, 10);
 
     return sneaker;
 }
 
-void readSneakersFromFile(const char* fileName, Sneaker** sneakersArray, int* sneakersNumber) {
-    FILE* f = fopen(fileName, "r");
+void readSneakersFromFile(const char *fileName, Sneaker **sneakersArray, int *sneakersNumber) {
+    FILE *f = fopen(fileName, "r");
     char buffer[LINESIZE];
     Sneaker sneaker;
 
     fgets(buffer, LINESIZE, f);
-    *sneakersNumber = (int)strtol(buffer, NULL, 10);
+    *sneakersNumber = (int) strtol(buffer, NULL, 10);
 
     *sneakersArray = malloc((*sneakersNumber) * sizeof(Sneaker));
 
@@ -82,8 +83,8 @@ void readSneakersFromFile(const char* fileName, Sneaker** sneakersArray, int* sn
     fclose(f);
 }
 
-void insertAtBeginningDLL(DoublyLinkedList* dll, Sneaker sneaker) {
-    NodeDLL* newNode = malloc(sizeof(NodeDLL));
+void insertAtBeginningDLL(DoublyLinkedList *dll, Sneaker sneaker) {
+    NodeDLL *newNode = malloc(sizeof(NodeDLL));
     newNode->sneaker = sneaker;
 
     newNode->next = (*dll).head;
@@ -91,16 +92,15 @@ void insertAtBeginningDLL(DoublyLinkedList* dll, Sneaker sneaker) {
 
     if ((*dll).head) {
         (*dll).head->prev = newNode;
-    }
-    else {
+    } else {
         (*dll).tail = newNode;
     }
 
     (*dll).head = newNode;
 }
 
-void insertAtEndDLL(DoublyLinkedList* dll, Sneaker sneaker) {
-    NodeDLL* newNode = malloc(sizeof(NodeDLL));
+void insertAtEndDLL(DoublyLinkedList *dll, Sneaker sneaker) {
+    NodeDLL *newNode = malloc(sizeof(NodeDLL));
     newNode->sneaker = sneaker;
 
     newNode->prev = (*dll).tail;
@@ -108,8 +108,7 @@ void insertAtEndDLL(DoublyLinkedList* dll, Sneaker sneaker) {
 
     if ((*dll).tail) {
         (*dll).tail->next = newNode;
-    }
-    else {
+    } else {
         (*dll).head = newNode;
     }
 
@@ -122,8 +121,7 @@ void parseListBtoE(DoublyLinkedList dll) {
             printSneakerToConsole(dll.head->sneaker);
             dll.head = dll.head->next;
         }
-    }
-    else
+    } else
         printf("List is empty\n");
 }
 
@@ -133,16 +131,15 @@ void parseListEtoB(DoublyLinkedList dll) {
             printSneakerToConsole(dll.tail->sneaker);
             dll.tail = dll.tail->prev;
         }
-    }
-    else
+    } else
         printf("List is empty\n");
 }
 
-Sneaker deleteFromBeginningDLL(DoublyLinkedList* dll) {
+Sneaker deleteFromBeginningDLL(DoublyLinkedList *dll) {
 
     if ((*dll).head) {
 
-        NodeDLL* currentNode = (*dll).head;
+        NodeDLL *currentNode = (*dll).head;
         Sneaker deletedSneaker = currentNode->sneaker;
 
         if ((*dll).head->next) {
@@ -151,8 +148,7 @@ Sneaker deleteFromBeginningDLL(DoublyLinkedList* dll) {
             free(currentNode);
 
             return deletedSneaker;
-        }
-        else {
+        } else {
             free(currentNode);
             (*dll).head = NULL;
             (*dll).tail = NULL;
@@ -164,11 +160,11 @@ Sneaker deleteFromBeginningDLL(DoublyLinkedList* dll) {
     return initSneaker(0, "ERROR SNEAKER", 0.0, 0);
 }
 
-Sneaker deleteFromEndDLL(DoublyLinkedList* dll) {
+Sneaker deleteFromEndDLL(DoublyLinkedList *dll) {
 
     if ((*dll).tail) {
 
-        NodeDLL* currentNode = (*dll).tail;
+        NodeDLL *currentNode = (*dll).tail;
         Sneaker deletedSneaker = currentNode->sneaker;
 
         if ((*dll).tail->prev) {
@@ -177,8 +173,7 @@ Sneaker deleteFromEndDLL(DoublyLinkedList* dll) {
             free(currentNode);
 
             return deletedSneaker;
-        }
-        else {
+        } else {
             free(currentNode);
             (*dll).head = NULL;
             (*dll).tail = NULL;
@@ -190,54 +185,70 @@ Sneaker deleteFromEndDLL(DoublyLinkedList* dll) {
     return initSneaker(0, "ERROR SNEAKER", 0.0, 0);
 }
 
-/*int listLength(DoublyLinkedList dll) {
+int listLength(DoublyLinkedList dll) {
     int len = 0;
     while (dll.head) {
         len += 1;
         dll.head = dll.head->next;
     }
-}*/
+}
 
 int main() {
-
     int sneakersNumber;
-    Sneaker* sneakersArray;
+    Sneaker *sneakersArray;
 
     readSneakersFromFile("sneakers.txt", &sneakersArray, &sneakersNumber);
 
-    /*for (int i = 0; i < tasksNumber; i++) {
-        printTaskToConsole(tasksArray[i]);
-    }*/
+    printf("##########\nPrinting the sneakers from file!\n##########\n");
+    for (int i = 0; i < sneakersNumber; i++) {
+        printSneakerToConsole(sneakersArray[i]);
+    }
+
+    printf("---------------------\n");
 
     DoublyLinkedList dll;
 
     dll.head = NULL;
     dll.tail = NULL;
 
-    insertAtBeginningDLL(&dll, sneakersArray[0]);
-    insertAtBeginningDLL(&dll, sneakersArray[1]);
-    insertAtBeginningDLL(&dll, sneakersArray[1]);
-    insertAtBeginningDLL(&dll, sneakersArray[2]);
-    insertAtBeginningDLL(&dll, sneakersArray[3]);
-    insertAtBeginningDLL(&dll, sneakersArray[4]);
-    insertAtEndDLL(&dll, sneakersArray[0]);
+    for (int i = 0; i < sneakersNumber; i++)
+        insertAtEndDLL(&dll, sneakersArray[i]);
 
+    printf("##########\nPrinting the sneakers from double list!\n##########\n");
     parseListBtoE(dll);
 
-    printf("\n\n----\n\n");
+    printf("---------------------\n");
 
+    printf("##########\nInserting sneaker at beginning: id: 0; name: first; size: 40.5; price: 500\n##########\n");
+    insertAtBeginningDLL(&dll, initSneaker(0, "first\n", 40.5f, 500));
+    printf("##########\nInserting sneaker at end: id: 6; name: last; size: 40.5; price: 500\n##########\n");
+    insertAtEndDLL(&dll, initSneaker(6, "last\n", 42.5f, 500));
+
+    printf("##########\nAsc Printing the sneakers from double list after inserts!\n##########\n");
     parseListBtoE(dll);
 
-    printf("\n\n----\n\n");
+    printf("---------------------\n");
 
+    printf("##########\nDesc Printing the sneakers from double list after inserts!\n##########\n");
     parseListEtoB(dll);
 
-    Sneaker ds = deleteFromBeginningDLL(&dll);
-    printSneakerToConsole(ds);
+    printf("---------------------\n");
 
-    ds = deleteFromEndDLL(&dll);
 
-    printSneakerToConsole(ds);
+    Sneaker deletedSneakerFromBeginning = deleteFromBeginningDLL(&dll);
+    printf("##########\nSneaker sters de la inceput:\n##########\n");
+    printSneakerToConsole(deletedSneakerFromBeginning);
+    printf("---------------------\n");
+
+    Sneaker deletedSneakerFromEnd = deleteFromEndDLL(&dll);
+    printf("##########\nSneaker sters de la inceput:\n##########\n");
+    printSneakerToConsole(deletedSneakerFromEnd);
+    printf("---------------------\n");
+
+    printf("##########\nAsc Printing the sneakers from double list after delete!\n##########\n");
+    parseListBtoE(dll);
+
+    printf("---------------------\n");
 
     return 0;
 }
