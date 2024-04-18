@@ -1,246 +1,241 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include<stdio.h>
-#include<stdlib.h>
 #include<string.h>
+#include<stdlib.h>
+//#include<malloc.h>
+
+typedef struct SuperCar SuperCar;
+typedef struct Node Node;
 
 #define LINESIZE 128
 
-typedef struct Vehicle Vehicle;
-typedef struct Node Node;
-
-struct Vehicle {
+struct SuperCar {
     int id;
-    char *brand;
+    char* brand;
     float engineSize;
     int price;
 };
 
 struct Node {
-    Vehicle vehicle;
-    Node *next;
+    SuperCar supercar;
+    Node* next;
 };
 
-void printVehicleToConsole(Vehicle vehicle) {
+void printSuperCarToConsole(SuperCar supercar) {
     printf("\n----------\nId: %d\nBrand: %sEngine: %.2f\nPrice: %d\n----------\n",
-           vehicle.id, vehicle.brand, vehicle.engineSize, vehicle.price);
+           supercar.id, supercar.brand, supercar.engineSize, supercar.price);
 }
 
-Vehicle initVehicle(int id, char* brand, float engineSize, int price) {
-    Vehicle vehicle = { .id = id, .brand = brand, .engineSize= engineSize, .price = price };
+SuperCar initSuperCar(int id, char* brand, float engineSize, int price) {
+    SuperCar supercar = { .id = id, .brand = brand, .engineSize = engineSize, .price = price };
 
-    vehicle.brand = malloc(strlen(brand) + 1);
-    strcpy(vehicle.brand, brand);
+    supercar.brand = malloc(strlen(brand) + 1);
+    strcpy(supercar.brand, brand);
 
-    return vehicle;
+    return supercar;
 }
 
-Vehicle deepCopy(Vehicle vehicle) {
-    Vehicle copy;
-
-    copy.id = vehicle.id;
-    copy.brand = (char *) malloc(strlen(vehicle.brand) + 1);
-    strcpy(copy.brand, vehicle.brand);
-    copy.engineSize = vehicle.engineSize;
-    copy.price = vehicle.price;
-
-    return copy;
-}
-
-Vehicle readVehicleFromFile(FILE *f) {
-    Vehicle vehicle;
+SuperCar readSuperCarFromFile(FILE* f) {
+    SuperCar supercar;
     char buffer[LINESIZE];
 
     fgets(buffer, LINESIZE, f);
-    vehicle.id = (int) strtol(buffer, NULL, 10);
+    supercar.id = (int)strtol(buffer, NULL, 10);
 
     fgets(buffer, LINESIZE, f);
-    vehicle.brand = (char *) malloc(strlen(buffer) + 1);
-    strcpy(vehicle.brand, buffer);
+    supercar.brand = (char*)malloc(strlen(buffer) + 1);
+    strcpy(supercar.brand, buffer);
 
     fgets(buffer, LINESIZE, f);
-    vehicle.engineSize = strtof(buffer, NULL);
+    supercar.engineSize = strtof(buffer, NULL);
 
     fgets(buffer, LINESIZE, f);
-    vehicle.price = (int) strtol(buffer, NULL, 10);
+    supercar.price = (int)strtol(buffer, NULL, 10);
 
-    return vehicle;
+    return supercar;
 }
 
-void readVehiclesFromFile(const char *fileName, Vehicle **auctionHouse, int *auctionHouseSize) {
+void readSuperCarsFromFile(const char* fileName, SuperCar** supercars, int* supercarsNumber) {
     char buffer[LINESIZE];
-
-    FILE *f = fopen(fileName, "r");
+    FILE* f = fopen(fileName, "r");
 
     fgets(buffer, LINESIZE, f);
-    *auctionHouseSize = (int) strtol(buffer, NULL, 10);
+    *supercarsNumber = (int)strtol(buffer, NULL, 10);
 
-    *auctionHouse = malloc((*auctionHouseSize) * sizeof(Vehicle));
-
-    for (int i = 0; i < *auctionHouseSize; i++)
-        (*auctionHouse)[i] = readVehicleFromFile(f);
+    *supercars = malloc((*supercarsNumber) * sizeof(SuperCar));
+    for (int i = 0; i < (*supercarsNumber); i++)
+        (*supercars)[i] = readSuperCarFromFile(f);
 
     fclose(f);
 }
 
-void insertAtBeginning(Node **head, Vehicle vehicle) {
-    Node *newNode = malloc(sizeof(Vehicle));
+void insertAtBeginning(Node** head, SuperCar supercar) {
+    Node* newNode = malloc(sizeof(Node));
 
-    newNode->vehicle = vehicle;
+    newNode->supercar = supercar;
     newNode->next = *head;
 
     *head = newNode;
 }
 
-void insertAtEnd(Node **head, Vehicle vehicle) {
+void insertAtEnd(Node** head, SuperCar supercar) {
     if (*head) {
         Node* aux = *head;
 
-        while(aux->next)
+        while (aux->next)
             aux = aux->next;
 
-        Node* newNode = malloc(sizeof(Vehicle));
+        Node* newNode = malloc(sizeof(Node));
 
-        newNode->vehicle = vehicle;
+        newNode->supercar = supercar;
         newNode->next = NULL;
 
         aux->next = newNode;
     }
     else
-        insertAtBeginning(head, vehicle);
+        insertAtBeginning(head, supercar);
 }
 
 void parseListAndPrint(Node* head) {
-    if(head) {
-        while(head) {
-            printVehicleToConsole(head->vehicle);
+    if (head) {
+        while (head) {
+            printSuperCarToConsole(head->supercar);
             head = head->next;
         }
     }
-    else
-        printf("The auction house has no cars!");
+    else {
+        printf("List is empty");
+    }
 }
 
-Vehicle deleteFromBeginning(Node** head) {
-    if(*head) {
-        Vehicle deletedVehicle;
+SuperCar deleteFromBeginning(Node** head) {
+    if (*head) {
+        SuperCar deletedfromBeginning;
         Node* oldHead = *head;
 
         *head = (*head)->next;
-        deletedVehicle = oldHead->vehicle;
+        deletedfromBeginning = oldHead->supercar;
         free(oldHead);
 
-        return deletedVehicle;
+        return deletedfromBeginning;
     }
     else {
-        Vehicle errorVehicle = { .id = 0, .brand = "???", .engineSize = 0.0f, .price = 0 };
-        return errorVehicle;
+        SuperCar error = { .id = 0, .brand = "???", .engineSize = 0.0f, .price = 0 };
+        return error;
     }
 }
 
-Vehicle deleteFromEnd(Node** head) {
-    if(*head) {
-        if((*head)->next) {
+SuperCar deleteFromEnd(Node** head) {
+    if (*head) {
+        // avem al doilea element?
+        if ((*head)->next) {
             Node* aux = *head;
-
-            while(aux->next->next)
+            // pozitionare pe penultimul elem
+            while (aux->next->next)
                 aux = aux->next;
 
-            Vehicle vehicle = aux->next->vehicle;
+            SuperCar deletedFromEnd = aux->next->supercar;
             free(aux->next);
             aux->next = NULL;
-            return vehicle;
+            return deletedFromEnd;
         }
+            // daca nu il stergi (o lista cu un elem)
         else {
-            Vehicle vehicle = (*head)->vehicle;
+            SuperCar deletedFromEnd = (*head)->supercar;
             free(*head);
             *head = NULL;
-            return vehicle;
+            return deletedFromEnd;
         }
     }
     else {
-        Vehicle errorVehicle = { .id = 0, .brand = "???", .engineSize = 0.0f, .price = 0 };
-        return errorVehicle;
+        SuperCar error = { .id = 0, .brand = "???", .engineSize = 0.0f, .price = 0 };
+        return error;
     }
 }
 
-Vehicle deleteWithCondition(Node **head, int id) {
+SuperCar deleteWithCondition(Node** head, int id) {
     if (*head) {
-        if ((*head)->vehicle.id == id)
+        // daca e primul
+        if ((*head)->supercar.id == id)
             return deleteFromBeginning(head);
-
+        // daca lista are 2 elem
         if ((*head)->next) {
-            Node *aux = *head;
+            Node* aux = *head;
 
-            while (aux->next && (aux->next->vehicle.id != id))
+            while (aux->next && (aux->next->supercar.id != id))
                 aux = aux->next;
 
             if (!aux->next) {
                 printf("Car not found!\n");
-                Vehicle empty = {.id = 0, .brand = "???\n", .engineSize = 0.0f, .price = 0};
+                SuperCar empty = { .id = 0, .brand = "???\n", .engineSize = 0.0f, .price = 0 };
                 return empty;
             }
 
-            Vehicle vehicle = aux->next->vehicle; // save sneaker
-            Node *deletedNode = aux->next; // save node for later freeing
+            SuperCar vehicle = aux->next->supercar; // save sneaker
+            Node* deletedNode = aux->next; // save node for later freeing
             aux->next = aux->next->next; // update link
             free(deletedNode); // free memory of deleted node
 
             return vehicle;
-        } else {
-            if ((*head)->vehicle.id == id) {
-                Vehicle vehicle = (*head)->vehicle;
+        }
+            // lista contine un singur elem
+        else {
+            if ((*head)->supercar.id == id) {
+                SuperCar supercar = (*head)->supercar;
 
                 free(*head);
                 *head = NULL;
 
-                return vehicle;
-            } else {
-                Vehicle empty = {.id = 0, .brand = "???\n", .engineSize = 0.0f, .price = 0};
+                return supercar;
+            }
+            else {
+                SuperCar empty = { .id = 0, .brand = "???\n", .engineSize = 0.0f, .price = 0 };
                 return empty;
             }
         }
-    } else {
-        Vehicle empty = {.id = 0, .brand = "???\n", .engineSize = 0.0f, .price = 0};
+    }
+    else {
+        SuperCar empty = { .id = 0, .brand = "???\n", .engineSize = 0.0f, .price = 0 };
         return empty;
     }
 }
 
 int main() {
-    int auctionHouseSize;
-    Vehicle *auctionHouse;
+    SuperCar* supercars;
+    int superCarsNumber;
 
     printf("\n----------\n\nAuction house contains:\n");
-    readVehiclesFromFile("vehicles.txt", &auctionHouse, &auctionHouseSize);
-    for (int i = 0; i < auctionHouseSize; i++)
-        printVehicleToConsole(auctionHouse[i]);
+    readSuperCarsFromFile("supercars.txt", &supercars, &superCarsNumber);
+    for (int i = 0; i < superCarsNumber; i++)
+        printSuperCarToConsole(supercars[i]);
     printf("\n--------------------\n");
 
-    printf("\n----------\n\nPopulate the list of vehicles from the auction house file!\n");
-    Node *head = NULL;
-    for (int i = 0; i < auctionHouseSize; i++)
-        insertAtEnd(&head, auctionHouse[i]);
+    printf("\n----------\n\nPopulate the list of supercars from the auction house file!\n");
+    Node* head = NULL;
+    for (int i = 0; i < superCarsNumber; i++)
+        insertAtEnd(&head, supercars[i]);
     parseListAndPrint(head);
     printf("\n--------------------\n");
 
     printf("\n----------\n\nBugatti Chiron is available in the parking lot at the entrance!\n");
-    insertAtBeginning(&head, initVehicle(0, "Bugatti Chiron\n", 8.0f, 3000000));
+    insertAtBeginning(&head, initSuperCar(0, "Bugatti Chiron\n", 8.0f, 3000000));
     printf("\n----------\n\nPagani Huayra is available in the parking lot at the exit!\n");
-    insertAtEnd(&head, initVehicle(9, "Pagani Huayra\n", 6.0, 3300000));
+    insertAtEnd(&head, initSuperCar(9, "Pagani Huayra\n", 6.0, 3300000));
 
-    printf("\n----------\n\nThe auction house contains:\n");
+    printf("\n----------\n\nAuction house contains:\n");
     parseListAndPrint(head);
     printf("\n--------------------\n");
 
-    printf("\n----------\n\nThe car from the entrance was sold!\n");
-    printf("\n----------\n\nThe next car was sold:\n");
-    Vehicle deletedFromBeginnig = deleteFromBeginning(&head);
-    printVehicleToConsole(deletedFromBeginnig);
+    printf("\n----------\n\nThe next supercar was sold from the entrance!\n");
+    SuperCar deletedFromBeginning = deleteFromBeginning(&head);
+    printSuperCarToConsole(deletedFromBeginning);
 
-    printf("\n----------\n\nThe car from the exit was sold!\n");
-    printf("\n----------\n\nThe next car was sold:\n");
-    Vehicle deletedFromEnd = deleteFromEnd(&head);
-    printVehicleToConsole(deletedFromEnd);
+    printf("\n----------\n\nThe next supercar was sold from the exit!\n");
+    SuperCar deletedFromEnd = deleteFromEnd(&head);
+    printSuperCarToConsole(deletedFromEnd);
 
-    printf("\n----------\n\nThe auction house contains:\n");
+    printf("\n----------\n\nAuction house contains:\n");
     parseListAndPrint(head);
     printf("\n--------------------\n");
 
@@ -248,8 +243,8 @@ int main() {
     int carWishId;
     scanf("%d", &carWishId);
     printf("\n----------\n\n\nCongratulations! You just bought a supercar:\n");
-    Vehicle deletedVehicleWithCondition = deleteWithCondition(&head, carWishId);
-    printVehicleToConsole(deletedVehicleWithCondition);
+    SuperCar deletedSuperCarWithCondition = deleteWithCondition(&head, carWishId);
+    printSuperCarToConsole(deletedSuperCarWithCondition);
     printf("\n--------------------\n");
 
     printf("\n----------\n\nThe auction house contains:\n");
