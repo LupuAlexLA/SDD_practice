@@ -1,0 +1,291 @@
+----------
+
+Auction house contains:
+
+----------
+Id: 1
+Brand: Ferrari F8 Tributo
+Engine: 3.90
+Price: 330000
+----------
+
+----------
+Id: 2
+Brand: Lamborghini Aventador
+Engine: 6.50
+Price: 421000
+----------
+
+----------
+Id: 3
+Brand: McLaren 720S
+Engine: 4.00
+Price: 315000
+----------
+
+----------
+Id: 4
+Brand: Aston Martin DBS Superleggera
+Engine: 5.20
+Price: 316000
+----------
+
+----------
+Id: 5
+Brand: Porsche 911 Turbo S
+Engine: 3.80
+Price: 207000
+----------
+
+----------
+Id: 6
+Brand: Audi R8
+Engine: 5.20
+Price: 208000
+----------
+
+----------
+Id: 7
+Brand: Bentley Continental GT
+Engine: 6.00
+Price: 240000
+----------
+
+----------
+Id: 8
+Brand: Mercedes-AMG GT R
+Engine: 4.00
+Price: 162000
+----------
+
+--------------------
+
+----------
+
+Populate the list of supercars from the auction house file!
+
+----------
+Id: 1
+Brand: Ferrari F8 Tributo
+Engine: 3.90
+Price: 330000
+----------
+
+----------
+Id: 2
+Brand: Lamborghini Aventador
+Engine: 6.50
+Price: 421000
+----------
+
+----------
+Id: 3
+Brand: McLaren 720S
+Engine: 4.00
+Price: 315000
+----------
+
+----------
+Id: 4
+Brand: Aston Martin DBS Superleggera
+Engine: 5.20
+Price: 316000
+----------
+
+----------
+Id: 5
+Brand: Porsche 911 Turbo S
+Engine: 3.80
+Price: 207000
+----------
+
+----------
+Id: 6
+Brand: Audi R8
+Engine: 5.20
+Price: 208000
+----------
+
+----------
+Id: 7
+Brand: Bentley Continental GT
+Engine: 6.00
+Price: 240000
+----------
+
+----------
+Id: 8
+Brand: Mercedes-AMG GT R
+Engine: 4.00
+Price: 162000
+----------
+
+--------------------
+
+----------
+
+Bugatti Chiron is available in the parking lot at the entrance!
+
+----------
+
+Pagani Huayra is available in the parking lot at the exit!
+
+----------
+
+Auction house contains:
+
+----------
+Id: 0
+Brand: Bugatti Chiron
+Engine: 8.00
+Price: 3000000
+----------
+
+----------
+Id: 1
+Brand: Ferrari F8 Tributo
+Engine: 3.90
+Price: 330000
+----------
+
+----------
+Id: 2
+Brand: Lamborghini Aventador
+Engine: 6.50
+Price: 421000
+----------
+
+----------
+Id: 3
+Brand: McLaren 720S
+Engine: 4.00
+Price: 315000
+----------
+
+----------
+Id: 4
+Brand: Aston Martin DBS Superleggera
+Engine: 5.20
+Price: 316000
+----------
+
+----------
+Id: 5
+Brand: Porsche 911 Turbo S
+Engine: 3.80
+Price: 207000
+----------
+
+----------
+Id: 6
+Brand: Audi R8
+Engine: 5.20
+Price: 208000
+----------
+
+----------
+Id: 7
+Brand: Bentley Continental GT
+Engine: 6.00
+Price: 240000
+----------
+
+----------
+Id: 8
+Brand: Mercedes-AMG GT R
+Engine: 4.00
+Price: 162000
+----------
+
+----------
+Id: 9
+Brand: Pagani Huayra
+Engine: 6.00
+Price: 3300000
+----------
+
+--------------------
+
+----------
+
+The next supercar was sold from the entrance!
+
+----------
+Id: 0
+Brand: Bugatti Chiron
+Engine: 8.00
+Price: 3000000
+----------
+
+----------
+
+The next supercar was sold from the exit!
+
+----------
+Id: 9
+Brand: Pagani Huayra
+Engine: 6.00
+Price: 3300000
+----------
+
+----------
+
+Auction house contains:
+
+----------
+Id: 1
+Brand: Ferrari F8 Tributo
+Engine: 3.90
+Price: 330000
+----------
+
+----------
+Id: 2
+Brand: Lamborghini Aventador
+Engine: 6.50
+Price: 421000
+----------
+
+----------
+Id: 3
+Brand: McLaren 720S
+Engine: 4.00
+Price: 315000
+----------
+
+----------
+Id: 4
+Brand: Aston Martin DBS Superleggera
+Engine: 5.20
+Price: 316000
+----------
+
+----------
+Id: 5
+Brand: Porsche 911 Turbo S
+Engine: 3.80
+Price: 207000
+----------
+
+----------
+Id: 6
+Brand: Audi R8
+Engine: 5.20
+Price: 208000
+----------
+
+----------
+Id: 7
+Brand: Bentley Continental GT
+Engine: 6.00
+Price: 240000
+----------
+
+----------
+Id: 8
+Brand: Mercedes-AMG GT R
+Engine: 4.00
+Price: 162000
+----------
+
+--------------------
