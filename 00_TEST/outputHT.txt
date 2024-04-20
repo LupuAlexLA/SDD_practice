@@ -1,0 +1,243 @@
+----------
+
+Auction house contains:
+
+----------
+Id: 1
+Brand: Ferrari F8 Tributo
+Engine: 3.90
+Price: 330000
+----------
+
+----------
+Id: 2
+Brand: Lamborghini Aventador
+Engine: 6.50
+Price: 421000
+----------
+
+----------
+Id: 3
+Brand: McLaren 720S
+Engine: 4.00
+Price: 315000
+----------
+
+----------
+Id: 4
+Brand: Aston Martin DBS Superleggera
+Engine: 5.20
+Price: 316000
+----------
+
+----------
+Id: 5
+Brand: Porsche 911 Turbo S
+Engine: 3.80
+Price: 207000
+----------
+
+----------
+Id: 6
+Brand: Audi R8
+Engine: 5.20
+Price: 208000
+----------
+
+----------
+Id: 7
+Brand: Bentley Continental GT
+Engine: 6.00
+Price: 240000
+----------
+
+----------
+Id: 8
+Brand: Mercedes-AMG GT R
+Engine: 4.00
+Price: 162000
+----------
+
+--------------------
+
+----------
+
+Populate the hashtable of supercars from the auction house file!
+
+Position 0
+
+----------
+Id: 2
+Brand: Lamborghini Aventador
+Engine: 6.50
+Price: 421000
+----------
+
+Position 1
+Empty bucket
+
+Position 2
+
+----------
+Id: 1
+Brand: Ferrari F8 Tributo
+Engine: 3.90
+Price: 330000
+----------
+
+Position 3
+Empty bucket
+
+Position 4
+Empty bucket
+
+Position 5
+
+----------
+Id: 6
+Brand: Audi R8
+Engine: 5.20
+Price: 208000
+----------
+
+----------
+Id: 7
+Brand: Bentley Continental GT
+Engine: 6.00
+Price: 240000
+----------
+
+Position 6
+
+----------
+Id: 3
+Brand: McLaren 720S
+Engine: 4.00
+Price: 315000
+----------
+
+----------
+Id: 5
+Brand: Porsche 911 Turbo S
+Engine: 3.80
+Price: 207000
+----------
+
+Position 7
+
+----------
+Id: 4
+Brand: Aston Martin DBS Superleggera
+Engine: 5.20
+Price: 316000
+----------
+
+----------
+Id: 8
+Brand: Mercedes-AMG GT R
+Engine: 4.00
+Price: 162000
+----------
+---------------------
+
+----------
+
+Searching in hash table for 'Audi R8'!
+Found at position 5
+
+----------
+Id: 6
+Brand: Audi R8
+Engine: 5.20
+Price: 208000
+----------
+
+----------
+
+Inserting new supercar in hash table!
+---------------------
+
+----------
+
+Printing again the supercars from hash table!
+
+Position 0
+
+----------
+Id: 2
+Brand: Lamborghini Aventador
+Engine: 6.50
+Price: 421000
+----------
+
+Position 1
+Empty bucket
+
+Position 2
+
+----------
+Id: 1
+Brand: Ferrari F8 Tributo
+Engine: 3.90
+Price: 330000
+----------
+
+Position 3
+
+----------
+Id: 9
+Brand: Bugatti Chiron
+Engine: 8.00
+Price: 3000000
+----------
+
+Position 4
+Empty bucket
+
+Position 5
+
+----------
+Id: 6
+Brand: Audi R8
+Engine: 5.20
+Price: 208000
+----------
+
+----------
+Id: 7
+Brand: Bentley Continental GT
+Engine: 6.00
+Price: 240000
+----------
+
+Position 6
+
+----------
+Id: 3
+Brand: McLaren 720S
+Engine: 4.00
+Price: 315000
+----------
+
+----------
+Id: 5
+Brand: Porsche 911 Turbo S
+Engine: 3.80
+Price: 207000
+----------
+
+Position 7
+
+----------
+Id: 4
+Brand: Aston Martin DBS Superleggera
+Engine: 5.20
+Price: 316000
+----------
+
+----------
+Id: 8
+Brand: Mercedes-AMG GT R
+Engine: 4.00
+Price: 162000
+----------
