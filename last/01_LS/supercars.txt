@@ -1,0 +1,33 @@
+8
+1
+Ferrari F8 Tributo
+3.9
+330000
+2
+Lamborghini Aventador
+6.5
+421000
+3
+McLaren 720S
+4.0
+315000
+4
+Aston Martin DBS Superleggera
+5.2
+316000
+5
+Porsche 911 Turbo S
+3.8
+207000
+6
+Audi R8
+5.2
+208000
+7
+Bentley Continental GT
+6.0
+240000
+8
+Mercedes-AMG GT R
+4.0
+162000

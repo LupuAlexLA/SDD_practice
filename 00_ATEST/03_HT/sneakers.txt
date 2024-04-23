@@ -1,0 +1,33 @@
+8
+1
+Nike Huarache
+42.5
+550
+2
+Adidas Super Star
+43.0
+600
+3
+Puma RS Running
+42.5
+730
+4
+Under Armour Project Rock 6
+42.66
+780
+5
+Puma Trinity
+42.0
+750
+6
+Nike Runner
+43.5
+450
+7
+Nike UpTempo
+42.5
+800
+8
+Vans Clasic
+43.66
+450
