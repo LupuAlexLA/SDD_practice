@@ -1,0 +1,26 @@
+5
+12/09/2023
+Ion Popescu
+2
+Tensiune arteriala marita
+200
+15/09/2023
+Maria Pop
+2
+Bronzita acuta in faza progresiva
+150
+15/09/2023
+Ana Mihai
+1
+Fractura de col femural cu complicatii
+500
+21/09/2023
+Ionut Radu
+1
+Hipertensiune arteriala stadiul II
+300
+24/09/2023
+Elena Georgescu
+1
+Tensiune arteriala marita
+250
