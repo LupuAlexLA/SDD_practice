@@ -1,0 +1,33 @@
+8
+Far led
+60
+1
+Reprezentanta BMW
+Parbriz
+60
+1
+Reprezentanta Porsche
+Distributie
+120
+0
+Reprezentanta Cupra
+Turbina
+60
+1
+Reprezentanta Audi
+Far led
+60
+1
+Reprezentanta Alfa Romeo
+Ambreiaj
+120
+0
+Reprezentanta Mercedes
+Electronica
+60
+1
+Reprezentanta Fiat
+Far laser
+60
+1
+Reprezentanta Fiat
