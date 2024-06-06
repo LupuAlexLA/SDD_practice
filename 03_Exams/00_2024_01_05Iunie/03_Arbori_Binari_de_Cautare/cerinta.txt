@@ -1,0 +1,23 @@
+Structura - Proiect:
+
+unsigned int IdProiect
+char* titluProiect
+char* contractant
+unsigned char durataNrZile
+float bugetAlocat
+float stadiuExecutat
+
+
+	1.	(2p) Fisier - 5 proiecte; inserare repetata, unde cheia de cautare in proiect este idProiect
+
+	2.	(1p) Functie care determina nr de proiecte care contine acelasi contractant.
+	contractantul e specificat ca parametru in functie
+
+	3.	(1p) Functie care modifica stadiul de exec al unui proiect specificat prin id, in lista de param,
+	validare prin cautare in ABC
+
+	4.	(2.5p) Functie care sterge nodurile frunza; validare prin traversare in inordine.
+
+	5.	(2.5p) Nu am notat
+
+1p Oficiu
