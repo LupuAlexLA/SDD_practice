@@ -1,0 +1,30 @@
+01. lista dubla Reteta
+02. hash table RaportAnalizeMedicale
+03. hash table Rezervare
+04. hash table 11 06 2021 ContBancar
+05. lista de liste 11 06 2021 Angajat
+06. arbore binar de cautare 11 06 2021 Comanda
+07. arbore binar de cautare 22 06 2021 Spectacol
+08. lista de liste 03 07 2020 Host
+09. hash table Comanda
+10. hash table CursaFeroviara
+11. lista dubla CursaAeriana
+12. arbore binar de cautare Fotografie
+13. lista dubla + arbore Angajat
+14. lista de liste + vector 07 06 2023 Consultatie
+15. lista dubla Localitate
+16. arbore binar de cautare 24 06 2023 Proiect
+17. arbore binar de cautare 22 06 2022 Rezervare
+18. hash table 22 06 2022 Proiect
+19. lista dubla 07 07 2021 Programare
+20. hash table + lista dubla Gradinita
+21. hash table + lista de liste DosarCandidat
+22. lista dubla Reteta
+23. lista de liste Localitate
+24. arbore AVL 15 06 2020 Task
+25. arbore binar de cautare 05 07 2023 Rezervare
+26. lista dubla 05 07 2023 Comanda
+27. lista de liste 05 06 2024 Programare
+28. hash table 05 06 2024 ?
+29. arbore binar de cautare 05 06 2024 Proiect
+30. lista dubla 05 06 2024 Reteta
