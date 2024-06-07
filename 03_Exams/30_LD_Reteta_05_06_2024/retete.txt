@@ -1,0 +1,43 @@
+7
+1
+Alexandru Firicel
+Dr. Maria Floarea
+asigurat
+3
+25
+2
+Maria Popa
+Dr. George Dinu
+neasigurat
+2
+20
+3
+Gigel Marin
+Dr. Potop Mihai
+asigurat
+5
+0
+4
+Bobel Dorel
+Dr. Neculai Marian
+neasigurat
+2
+30
+5
+Vlad Melinte
+Dr. Elena Carteleanu
+asigurat
+5
+50
+6
+Alexandru Pana
+Dr. Ionel Gigel
+neasigurat
+4
+15
+7
+Alexandru Florean
+Dr. Maria Joghiu
+asigurat
+3
+0
