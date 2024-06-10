@@ -25,6 +25,6 @@
 25. arbore binar de cautare 05 07 2023 Rezervare
 26. lista dubla 05 07 2023 Comanda
 27. lista de liste 05 06 2024 Programare
-28. hash table 05 06 2024 ?
+28. hash table 05 06 2024 Candidat
 29. arbore binar de cautare 05 06 2024 Proiect
 30. lista dubla 05 06 2024 Reteta
