@@ -1,0 +1,31 @@
+5
+1
+SII
+SIF Muntenia
+255
+25000.50
+0.25
+2
+FINAM
+Academia de Studii Economice
+250
+15000.00
+1.0
+3
+PAID
+PAID Romania
+200
+35000.50
+0.90
+4
+SEMP
+NIVA
+30
+0.00
+1
+5
+ERP
+SIF Muntenia
+200
+35000.00
+0.90
