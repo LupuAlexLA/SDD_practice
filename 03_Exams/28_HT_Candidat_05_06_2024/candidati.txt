@@ -1,0 +1,36 @@
+7
+1
+George Dan
+CSIE
+6.5
+6000
+2
+Florin Costache
+CSIE
+5.4
+4000
+3
+Dorel Lupoiu
+ECO
+6.0
+4500
+4
+Alex Ulei
+ETTI
+7.5
+7000
+5
+Daniel Lungu
+AUTO
+8.5
+9000
+6
+Ion Barbu
+INFO
+9.3
+13000
+7
+Paul Tudose
+CSIE
+10
+2000
