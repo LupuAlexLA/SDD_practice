@@ -1,0 +1,26 @@
+5
+1
+Marriot
+2
+Florin Tufaru
+499.99
+2
+Ibis
+3
+Elena Neagu
+749.99
+3
+Casa de Vis
+1
+Florin Tufaru
+299.99
+4
+Intercontinental
+1
+Radu Moise
+224.99
+5
+Marriot
+1
+Florin Tufaru
+199.99
