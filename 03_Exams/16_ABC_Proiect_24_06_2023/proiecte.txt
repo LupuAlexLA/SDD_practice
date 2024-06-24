@@ -1,0 +1,36 @@
+7
+1
+SEMP
+NIVA
+30
+0.0
+2
+PAID
+PAID Romania
+365
+4000.50
+3
+FINAM
+ASE
+250
+2500.00
+4
+SII
+SIF Muntenia
+180
+5000.50
+5
+ERP
+SIF Evergent
+730
+7500.00
+6
+FOND
+SIF Evergent
+730
+5500.00
+7
+HR
+ASE
+30
+1500.00

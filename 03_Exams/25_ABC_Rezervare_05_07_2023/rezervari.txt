@@ -1,0 +1,26 @@
+5
+1
+Marriot
+2
+Florin Tufaru
+25 06 2024
+2
+Ibis
+3
+Elena Neagu
+28 06 2024
+3
+Casa de Vis
+1
+Mariana Tepeliga
+24 06 2024
+4
+Intercontinental
+1
+Radu Moise
+02 07 2024
+5
+Marriot
+1
+Florin Tufaru
+30 06 2024
