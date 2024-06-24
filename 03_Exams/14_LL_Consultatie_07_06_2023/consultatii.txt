@@ -1,0 +1,36 @@
+7
+01 06 2024
+Ion Popescu
+Chirurgie
+Fractura deschisa
+300
+02 06 2024
+Maria Ionescu
+Cardiologie
+Aritmie si Hipertensiune
+200
+01 06 2024
+George Enescu
+Infectioase
+TBC
+100
+03 06 2024
+Ana Mihai
+Cardiologie
+Tahicardie
+100
+03 06 2024
+Vasile Cojocaru
+Urgente
+Infectie
+0
+05 06 2024
+Elena Vasilescu
+Urologie
+Infectie urinara
+200
+05 06 2024
+Cristian Popa
+Stomatologie
+Detartraj
+200

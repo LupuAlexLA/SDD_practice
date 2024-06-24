@@ -1,0 +1,36 @@
+7
+01 06 2024
+Ion Popescu
+1.5
+Consultanta IT
+150
+02 06 2024
+Maria Ionescu
+2.0
+Intretinere Sistem
+200
+01 06 2024
+George Enescu
+3.0
+Dezvoltare Software
+300
+03 06 2024
+Ana Mihai
+2.5
+Design Grafic
+250
+03 06 2024
+Vasile Cojocaru
+1.0
+Audit Securitate
+100
+05 06 2024
+Elena Vasilescu
+4.0
+ManagementProiect
+400
+05 06 2024
+Cristian Popa
+3.5
+Optimizare SEO
+350
